@@ -23,18 +23,4 @@ public class changeTheme {
 	      	stringToFile.close();
 	    }
 	}
-	public static String getInput() {
-		Scanner sc = new Scanner(System.in);
-		String input = sc.nextLine().toLowerCase();
-		if(input.matches("light|dark"))
-			return input;
-		else if (input.equals("l")) 
-			return "light";
-		else if (input.equals("d"))
-			return "dark";
-		else {
-			System.out.println("Invalid input");
-			return "Error";
-		}
-	}
 }
