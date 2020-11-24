@@ -5,12 +5,12 @@ public class input() {
 	private Scanner sc = new Scanner(System.in);
 
 	public static String getInput() {
-		return sc.nextLine();
+		return sc.next();
 	}
 
 	public static String getLD() {
 		String choice = sc.nextLine().toLowerCase();
-		if(input.matches("light|dark"))
+		if(choice.matches("light|dark"))
 			return choice;
 		else if (input.equals("l")) 
 			return "light";

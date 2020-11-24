@@ -7,8 +7,8 @@ public class changeTheme {
 		
 		System.out.println("Input light or dark [l/d]: ");
 		
-		File sd = new File("bluej-css\\" + getInput());
-		String ddStr = "C:\\Program Files\\BlueJ\\lib\\stylesheets\\";
+		File sd = new File("bluej-css\\" + input.getLD());
+		String ddStr = install.getInstallDir() + "\\BlueJ\\lib\\stylesheets\\";
 		File[] sfiles = sd.listFiles();
 		
 		for (File sfile : sfiles) 
