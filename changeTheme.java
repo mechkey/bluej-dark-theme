@@ -18,6 +18,7 @@ public class ChangeTheme {
 		
 		//Get user preference and set sd to the folder containing the appropriate css.		
 		File sd = new File("bluej-css\\" + input.getLD());
+		
 		//An array of file type containing the css files of the chosen theme for writing to the stylesheets directory
 		//sfiles = sd.listFiles();
 		File[] sfiles = sd.listFiles();

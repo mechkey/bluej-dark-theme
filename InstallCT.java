@@ -62,20 +62,4 @@ public class InstallCT {
 		return installDir;
 	}
 
-	
-	/*
-
-	public void makeInstallBAT() throws FileNotFoundException {
-		output.makeInstallBAT(installDir);
-
-	}
-
-	/*
-	public void makeShortcutBAT() {
-		output.makeShortcutBAT();
-
-	}
-	*/
-
-
 }
