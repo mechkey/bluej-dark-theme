@@ -26,6 +26,7 @@ public class Output {
 	 */
 	public static String makeShortcutBAT(String pInstallDir) throws FileNotFoundException {
 		PrintStream strToFile = new PrintStream("BlueJ.bat");
+		strToFile.println("java ChangeTheme");
 		strToFile.println("cd \"" + pInstallDir + "\\BlueJ\""); 
 		strToFile.println("start BlueJ.exe");
       	strToFile.close();
