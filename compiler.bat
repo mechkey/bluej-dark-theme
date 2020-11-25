@@ -1,3 +1,5 @@
-javac install.java
-javac input.java
-javac output.java
+javac InstallCT.java
+javac Input.java
+javac Output.java
+javac Main.java
+java Main

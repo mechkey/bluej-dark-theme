@@ -1,26 +1,35 @@
 import java.io.*;
 import java.util.*;
 
-public class input() {
-	private Scanner sc = new Scanner(System.in);
+public class Input {
+	private Scanner sc;
+	private String input;
 
-	public static String getInput() {
-		return sc.next();
+	public Input() {
+		sc = new Scanner(System.in);
 	}
 
-	public static String getLD() {
-		String choice = sc.nextLine().toLowerCase();
-		if(choice.matches("light|dark"))
-			return choice;
-		else if (input.equals("l")) 
-			return "light";
-		else if (input.equals("d"))
-			return "dark";
-		else if (input.equals("q"))
-			System.exit();
-		else {
-			System.out.println("Invalid selection, please try again.");
-			getLD();
+	public String getInput() {
+		input = sc.nextLine();
+		return input;
+	}
+	
+	public String getLD() {
+		String validatedInput = "";
+		String input = sc.nextLine().toLowerCase();
+		switch(input) {
+			case "l":
+				validatedInput = "light";
+				break;
+			case "d":
+			    validatedInput = "dark";
+			    break;
+			case "light|dark":
+			    validatedInput = input;
+			    break;
+			default:
+			    System.out.println("Invalid selection, please try again.");
 		}
+		return validatedInput;
 	}
 }
