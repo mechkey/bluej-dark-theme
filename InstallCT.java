@@ -2,22 +2,35 @@ import java.io.*;
 import java.util.*;
 
 public class InstallCT {
-	private String installDir;
-	private Input input;
-	private Output output;
-	private boolean locConfirmed;
+	private static String installDir;
+	private static Input input;
+	private static Output output;
+	private static boolean locConfirmed;
+	private static String confirmed;
+	private static String customLoc;
 
+	/**
+	 * Constructor for InstallCT class.
+	 */
 	public InstallCT() {
-		installDir = "";
 		locConfirmed = false;
-
+		input = new Input();
+		output = new Output();
+		confirmed = "n";
+		customLoc = "";
 	}
-	public void startInstall() {
+
+	public static void main(String[] args) {
+		startInstall();
+	}
+	/**
+	 * Main method that gets the install directory from the user
+	 *
+	 */
+	public static void startInstall() {
 		System.out.println("Is your BlueJ directory in the default location?");
 		System.out.println("( C:\\Program Files ) [y/n]: ");
 		String inputted = input.getInput();
-		String confirmed = "n";
-		String customLoc = "";
 
 		switch(inputted) {
 			case "y": 
@@ -35,33 +48,34 @@ public class InstallCT {
 				System.out.println ("Please input y or n");
 		}	
 		try {
+
 			System.out.println(output.makeInstallBAT(installDir));
 			System.out.println(output.makeShortcutBAT(installDir));
 		} catch (FileNotFoundException e) {
 			System.out.println("Caught exception: " + e);
 		}
 	}
-
-	/*
-	public String getInstallDir() {
+	/**
+	 * Getter for the install location
+	 */
+	public static String getInstallDir() {
 		return installDir;
 	}
-	*/
+
+	
 	/*
 
 	public void makeInstallBAT() throws FileNotFoundException {
-		omakeInstallBAT(installDir);
+		output.makeInstallBAT(installDir);
 
 	}
+
 	/*
 	public void makeShortcutBAT() {
 		output.makeShortcutBAT();
 
 	}
 	*/
-
-
-
 
 
 }

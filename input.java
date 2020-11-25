@@ -2,21 +2,29 @@ import java.io.*;
 import java.util.*;
 
 public class Input {
-	private Scanner sc;
 	private String input;
 
 	public Input() {
-		sc = new Scanner(System.in);
+		input = "";
 	}
 
-	public String getInput() {
-		input = sc.nextLine();
+	/**
+	 * Generic get input method
+	 * @return the inputted string.
+	 */
+	public static String getInput() {
+		Scanner sc = new Scanner(System.in);
+		String input = sc.nextLine();
 		return input;
 	}
 	
-	public String getLD() {
+	/**
+	 * Get input method specifically for the light/dark switch.
+	 * @return String - the choice light or dark
+	 */
+	public static String getLD() {
+		String input = getInput().toLowerCase();
 		String validatedInput = "";
-		String input = sc.nextLine().toLowerCase();
 		switch(input) {
 			case "l":
 				validatedInput = "light";
@@ -32,4 +40,6 @@ public class Input {
 		}
 		return validatedInput;
 	}
+
+	
 }
