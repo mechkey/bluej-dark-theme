@@ -11,10 +11,9 @@ public class Output {
 	 * @return a message of success after the method has run.
 	 */
 	public static String makeInstallBAT(String pInstallDir) throws FileNotFoundException {
-		PrintStream strToFile = new PrintStream("install.bat");
+		PrintStream strToFile = new PrintStream("fixpermissions.bat");
         strToFile.println("ICACLS \"" + pInstallDir + "\\BlueJ\" /grant:r \"everyone\":(F) /C /t");
         strToFile.println("If you received an error, right click install.bat and select \"Run as Administrator\".");
-		strToFile.println("javac changeTheme.java");
       	strToFile.close();
       	return "makeInstallBAT successful!";
     }
@@ -34,8 +33,3 @@ public class Output {
 
 	}
 }
-
-/*
-cd "C:\Program Files\BlueJ"
-start BlueJ.exe
-*/
