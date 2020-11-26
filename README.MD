@@ -10,6 +10,7 @@ can read the source code.
 2. Right click on compiler.bat and run it.
 3. In the terminal window follow the prompts. Right click will paste 
 	the directory path.
+4. Right click and run the fixpermissions.bat 
 
 # Running
 1. Run BlueJ.bat
