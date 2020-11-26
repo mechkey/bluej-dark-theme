@@ -15,7 +15,7 @@ public class Output {
         strToFile.println("ICACLS \"" + pInstallDir + "\\BlueJ\" /grant:r \"everyone\":(F) /C /t");
         strToFile.println("If you received an error, right click install.bat and select \"Run as Administrator\".");
       	strToFile.close();
-      	return "Made FixPermissions.bat successfully!";
+      	return "Made fixpermissions.bat successfully!";
     }
 	
     /**
