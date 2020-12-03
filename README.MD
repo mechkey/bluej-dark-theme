@@ -17,3 +17,6 @@ can read the source code.
 2. At the prompt, respond with your preference.
 3. BlueJ will start automatically.
 
+# To do
+1. Update Input.java to replace the switch statement with a hash map
+2. Make install easier / make a .jar? Idk
