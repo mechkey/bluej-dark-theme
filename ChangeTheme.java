@@ -21,7 +21,7 @@ public class ChangeTheme {
 		System.out.println("Input light or dark [l/d]: ");
 		
 		//Get user preference and set sd to the folder containing the appropriate css.		
-		File sd = new File("bluej-css\\" + in.getLD());
+		File sd = new File("stylesheets\\" + in.getLD());
 		
 		//An array of file type containing the css files of the chosen theme for writing to the stylesheets directory
 		//sfiles = sd.listFiles();
